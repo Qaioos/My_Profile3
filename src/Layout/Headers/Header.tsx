@@ -10,7 +10,7 @@ const Header = () => {
     const [isOpenArtical, setisOpenArtical] = useState<boolean>(false);
 
     return (
-        <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-[#090A0F]/85 border-b border-white/10 shadow-2xl transition-all duration-300">
+        <header className="fixed max-w-[1440px] s-max-w-[90%] top-0 inset-x-0 z-50 backdrop-blur-xl bg-[#090A0F]/85 border-b border-white/10 shadow-2xl transition-all duration-300">
             <div className="w-full max-w-[1640px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
                 {/* <!-- Brand & Identity --> */}
                 <a className="flex items-center gap-3.5 group" href="#">
@@ -24,7 +24,7 @@ const Header = () => {
                     <div className="flex flex-col">
                         <div className="flex items-center gap-2">
                             <span className="font-display-hero text-lg font-bold tracking-tight uppercase text-white group-hover:text-[#FF5500] transition-colors">
-                                KAIRO
+                                Qais
                             </span>
                             <span className="font-label-mono-sm text-[10px] px-1.5 py-0.5 rounded bg-[#FF5500]/15 text-[#FF5500] border border-[#FF5500]/30 font-semibold tracking-widest">
                                 ARCHITECT
@@ -84,13 +84,13 @@ const Header = () => {
                     </a>
                 </div>
             </div>
-            {isOpenArtical && (
+            
                 <MobileMenu
                     navs={NAVS}
                     isOpen={isOpenArtical}
                     onClose={() => setisOpenArtical(false)}
                 />
-            )}
+            
         </header>
     );
 };

@@ -1,29 +1,148 @@
+import { useState } from "react";
 import DownloadCVButton from "./BtnDownload";
 import TelemetryCard from "./Card";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+    const [isHovered1, setIsHovered1] = useState(false);
+
+    /*     const [isHovered2, setIsHovered2] = useState(false);
+    const [isHovered3, setIsHovered3] = useState(false); */
     return (
-        <section className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-between max-w-[1640px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-16">
+        <section className="min-h-[calc(100vh-5rem)] flex flex-col justify-between w-full mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-16">
             {/* <!-- Top Hero Telemetry Status Tags --> */}
-            <div className="flex flex-wrap items-center gap-3 mb-8">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181A24]/90 border border-white/10 backdrop-blur-md">
-                    <span className="w-2 h-2 rounded-full bg-[#FF5500] shadow-[0_0_8px_#FF5500]"></span>
-                    <span className="font-label-mono-sm text-xs text-white uppercase tracking-wider">
-                        STRAPI v5.4 KERNEL // SYNCED
-                    </span>
-                </div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181A24]/90 border border-[#8B5CF6]/30 backdrop-blur-md">
-                    <span className="w-2 h-2 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]"></span>
-                    <span className="font-label-mono-sm text-xs text-[#A855F7] uppercase tracking-wider">
-                        WEBGL SHADER PIPELINE: ONLINE
-                    </span>
-                </div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181A24]/90 border border-white/10 text-outline backdrop-blur-md font-label-mono-sm text-xs">
-                    <span className="material-symbols-outlined text-[14px] text-[#FF5500]">
-                        terminal
-                    </span>
-                    <span>COMPUTE_SHADERS: ENABLED (WGSL / GLSL)</span>
-                </div>
+            <div className=" relative  flex flex-wrap items-center gap-6 mb-8 w-full min-h-[60px]">
+                {/* الشارة الأولى: STRAPI v5.4 KERNEL */}
+                <motion.div
+                    // 💡 التجميد السحري: إذا كانت hovered تكون الأبعاد 0 (تثبت مكانها الحالي)، وإلا تستمر في المصفوفة الحركية
+                    animate={
+                        isHovered1
+                            ? { x: undefined, y: undefined, rotate: undefined }
+                            : {
+                                  x: [0, 100, 300, -10, 100, 0],
+                                  y: [0, 100, 200, 100, 200, 0],
+                                  rotate: [0, 8, -5, 0],
+                              }
+                    }
+                    transition={
+                        isHovered1
+                            ? { duration: 0 }
+                            : {
+                                  duration: 8,
+                                  ease: "easeInOut",
+                                  repeat: Infinity,
+                              }
+                    }
+                    onMouseEnter={() => setIsHovered1(true)}
+                    onMouseLeave={() => setIsHovered1(false)}
+                    className=" absolute will-change-transform cursor-pointer pointer-events-auto"
+                >
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181A24]/90 border border-white/10 backdrop-blur-md shadow-[0_0_15px_rgba(255,85,0,0.15)] hover:scale-105 transition-transform duration-200">
+                        <span className="w-2 h-2 rounded-full bg-[#FF5500] shadow-[0_0_8px_#FF5500]"></span>
+                        <span className="font-mono text-xs text-white uppercase tracking-wider">
+                            STRAPI v5.4 KERNEL
+                        </span>
+                    </div>
+                </motion.div>
+
+                {/* الشارة الثانية: Next.js */}
+                <motion.div
+                    animate={
+                        isHovered1
+                            ? { x: undefined, y: undefined, rotate: undefined }
+                            : {
+                                  x: [0, -100, 300, 10, -100, 0],
+                                  y: [0, 200, 100, 200, -10, 0],
+                                  rotate: [0, 80, -5, 0],
+                              }
+                    }
+                    transition={
+                        isHovered1
+                            ? { duration: 0 }
+                            : {
+                                  duration: 10,
+                                  ease: "easeInOut",
+                                  repeat: Infinity,
+                              }
+                    }
+                    onMouseEnter={() => setIsHovered1(true)}
+                    onMouseLeave={() => setIsHovered1(false)}
+                    className="will-change-transform cursor-pointer pointer-events-auto"
+                >
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181A24]/90 border border-[#8B5CF6]/30 backdrop-blur-md shadow-[0_0_15px_rgba(139,92,246,0.15)] hover:scale-105 transition-transform duration-200">
+                        <span className="w-2 h-2 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]"></span>
+                        <span className="font-mono text-xs text-[#A855F7] uppercase tracking-wider">
+                            Next.js
+                        </span>
+                    </div>
+                </motion.div>
+
+                {/* الشارة الثالثة: TypeScript */}
+
+                <motion.div
+                    animate={
+                        isHovered1
+                            ? { x: undefined, y: undefined, rotate: undefined }
+                            : {
+                                  x: [0, 120, 120, 0],
+                                  y: [0, 150, -10, 100, 0],
+                                  rotate: [0, 5, -8, 0],
+                              }
+                    }
+                    transition={
+                        isHovered1
+                            ? { duration: 0 }
+                            : {
+                                  duration: 7,
+                                  ease: "easeInOut",
+                                  repeat: Infinity,
+                              }
+                    }
+                    onMouseEnter={() => setIsHovered1(true)}
+                    onMouseLeave={() => setIsHovered1(false)}
+                    className="will-change-transform cursor-pointer pointer-events-auto"
+                >
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181A24]/90 border border-white/10 backdrop-blur-md shadow-[0_0_15px_rgba(255,85,0,0.1)] hover:scale-105 transition-transform duration-200">
+                        <span className="material-symbols-outlined text-[14px] text-[#FF5500]">
+                            terminal
+                        </span>
+                        <span className="font-mono text-xs text-[#FF5500] uppercase tracking-wider">
+                            TypeScript
+                        </span>
+                    </div>
+                </motion.div>
+                <motion.div
+                    animate={
+                        isHovered1
+                            ? { x: undefined, y: undefined, rotate: undefined }
+                            : {
+                                  x: [0, 200, -20, 0],
+                                  y: [0, 50, 100, -10, 0],
+                                  rotate: [0, 5, -8, 0],
+                              }
+                    }
+                    transition={
+                        isHovered1
+                            ? { duration: 0 }
+                            : {
+                                  duration: 7,
+                                  ease: "easeInOut",
+                                  repeat: Infinity,
+                              }
+                    }
+                    onMouseEnter={() => setIsHovered1(true)}
+                    onMouseLeave={() => setIsHovered1(false)}
+                    className="will-change-transform cursor-pointer pointer-events-auto"
+                >
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181A24]/90 border border-white/10 backdrop-blur-md shadow-[0_0_15px_rgba(255,85,0,0.1)] hover:scale-105 transition-transform duration-200">
+                        <span className="material-symbols-outlined text-[14px] text-[#FF5500]">
+                            terminal
+                        </span>
+                        <span className="font-mono text-xs text-[#FF5500] uppercase tracking-wider">
+                            React.j
+                        </span>
+                    </div>
+                </motion.div>
             </div>
             {/* <!-- Center Hero Grid: Giant Typography & Floating Code/Telemetry HUD --> */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center my-auto">
@@ -46,7 +165,12 @@ const Hero = () => {
                         </span>
                         <br />
                         <span className="text-white/95">
-                            &amp; COMPUTATIONAL
+                            &amp;
+                            <br />
+                            Software{" "}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF5500] via-[#FF6B1A] to-[#8B5CF6] drop-shadow-[0_0_35px_rgba(255,85,0,0.35)]">
+                                Engineer
+                            </span>
                         </span>
                         <br />
                         <span className="text-white/40 hover:text-white transition-colors duration-500">
@@ -87,14 +211,18 @@ const Hero = () => {
                         </span>
                     </div>
                     <div className="font-display-hero text-4xl font-extrabold text-white">
-                        8+
+                        2+
                         <span className="text-sm font-label-mono-sm font-normal text-outline">
                             YEARS
                         </span>
                     </div>
                     <div className="text-xs text-[#9EA3B0] font-body-sm">
-                        Sculpting bespoke WebGL shaders, Next.js kernels, and
-                        generative interactions.
+                        Senior Creative Engineer (8+ YOE) crafting
+                        high-performance Next.js/React architectures and bespoke
+                        WebGL/WebGPU interactions. Expert in TypeScript,
+                        type-safe development, and headless pipelines via
+                        Strapi. Bridging complex math (SDFs, FBO) with
+                        production-ready code.
                     </div>
                 </div>
                 <div className="p-5 rounded-xl bg-[#10121A]/70 border border-white/5 backdrop-blur-md flex flex-col gap-1">
@@ -111,8 +239,8 @@ const Hero = () => {
                         </span>
                     </div>
                     <div className="text-xs text-[#9EA3B0] font-body-sm">
-                        Awwwards SOTD, FWA of the Month, and CSSDA Special Kudos
-                        honors.
+                        Orchestrating production-grade Next.js kernels and
+                        type-safe TypeScript architectures.
                     </div>
                 </div>
                 <div className="p-5 rounded-xl bg-[#10121A]/70 border border-white/5 backdrop-blur-md flex flex-col gap-1">
