@@ -10,7 +10,7 @@ const Header = () => {
     const [isOpenArtical, setisOpenArtical] = useState<boolean>(false);
 
     return (
-        <header className="fixed max-w-[1440px] s-max-w-[90%] top-0 inset-x-0 z-50 backdrop-blur-xl bg-[#090A0F]/85 border-b border-white/10 shadow-2xl transition-all duration-300">
+        <header className="relative max-w-[1440px] max-w-[90%] top-0 inset-x-0 z-400 backdrop-blur-xl bg-[#090A0F]/85 border-b border-white/10 shadow-2xl transition-all duration-300">
             <div className="w-full max-w-[1640px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
                 {/* <!-- Brand & Identity --> */}
                 <a className="flex items-center gap-3.5 group" href="#">
@@ -75,13 +75,13 @@ const Header = () => {
                     {/* <!-- Audio Atmosphere Toggle --> */}
 
                     {/* <!-- Mobile Menu Trigger --> */}
-                    <a
+                    <button
                         onClick={() => setisOpenArtical(!isOpenArtical)}
                         className="lg:hidden p-2 rounded-lg bg-[#FF5500] text-white font-bold text-xs font-label-mono-sm"
-                        href="#contact"
                     >
-                        ENGAGE
-                    </a>
+                        MENU
+                    </button>
+
                 </div>
             </div>
             

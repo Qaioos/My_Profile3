@@ -11,7 +11,7 @@ const Hero = () => {
     return (
         <section className="min-h-[calc(100vh-5rem)] flex flex-col justify-between w-full mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-16">
             {/* <!-- Top Hero Telemetry Status Tags --> */}
-            <div className=" relative  flex flex-wrap items-center gap-6 mb-8 w-full min-h-[60px]">
+            <div className=" relative z-300  flex flex-wrap items-center gap-6 mb-8 w-full min-h-[60px]">
                 {/* الشارة الأولى: STRAPI v5.4 KERNEL */}
                 <motion.div
                     // 💡 التجميد السحري: إذا كانت hovered تكون الأبعاد 0 (تثبت مكانها الحالي)، وإلا تستمر في المصفوفة الحركية

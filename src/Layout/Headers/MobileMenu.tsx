@@ -19,7 +19,7 @@ const MobileMenu = ({ navs, isOpen, onClose }: MobileMenuProps) => {
                     exit={{ opacity: 1, y: -205 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     
-                    className="fixed relative inset-0  md:hidden flex flex-col justify-center items-center px-6 backdrop-blur-lg"
+                    className="fixed absolute inset-0  md:hidden flex flex-col justify-center items-center px-6 backdrop-blur-lg"
                 >
                     {/* خلفية مخفية لإغلاق القائمة عند الضغط خارج المربع */}
                     <div className="absolute inset-0 w-10000 h-10000" onClick={onClose} />
