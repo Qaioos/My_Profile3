@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 
-export default function HandleResize() {
+const PageSize = () => {
     // 1. تحديد ما إذا كانت الشاشة موبايل أم لا
     const [isMobile, setIsMobile] = useState(false);
 
-
-
     useEffect(() => {
-        const handleResize = () => {
+        const HandleResize = () => {
             setIsMobile(window.innerWidth < 768); // 768px هو الموبايل والتابلت
         };
-        
-        handleResize(); // تشغيل عند أول رندر
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+
+        HandleResize(); // تشغيل عند أول رندر
+        window.addEventListener("resize", HandleResize);
+        return () => window.removeEventListener("resize", HandleResize);
     }, []);
 
     return { isMobile };
-}
+};
+
+export default PageSize;

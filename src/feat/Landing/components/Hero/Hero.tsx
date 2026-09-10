@@ -2,14 +2,19 @@ import { useState } from "react";
 import DownloadCVButton from "./BtnDownload";
 import TelemetryCard from "./Card";
 import { motion } from "framer-motion";
-import HandleResize from "../../../../lib/IsMobile/handleResize";
+import PageSize from "../../../../lib/IsMobile/PageSize";
+
 
 const Hero = () => {
-    const { isMobile } = HandleResize();
+    const { isMobile } = PageSize();
     const [isHovered1, setIsHovered1] = useState(false);
-    const MOTIONMOVE = isMobile 
+    const MOTIONMOVE = isMobile
         ? { x: [0, 23, -15, 0], y: [0, 150, -5, 0], rotate: [0, 13, -22, 0] } // حركة اهتزاز خفيفة جداً للموبايل
-        : { x: [0, 100, 300, -10, 100, 0], y: [0, 100, 200, 100, 200, 0], rotate: [0, 8, -5, 0] }; // الحركة الكبيرة للكمبيوتر
+        : {
+              x: [0, 100, 300, -10, 100, 0],
+              y: [0, 100, 200, 100, 200, 0],
+              rotate: [0, 8, -5, 0],
+          }; // الحركة الكبيرة للكمبيوتر
 
     /*     const [isHovered2, setIsHovered2] = useState(false);
     const [isHovered3, setIsHovered3] = useState(false); */
@@ -20,9 +25,7 @@ const Hero = () => {
                 {/* الشارة الأولى: STRAPI v5.4 KERNEL */}
                 <motion.div
                     // 💡 التجميد السحري: إذا كانت hovered تكون الأبعاد 0 (تثبت مكانها الحالي)، وإلا تستمر في المصفوفة الحركية
-                    animate={
-                        MOTIONMOVE
-                    }
+                    animate={MOTIONMOVE}
                     transition={
                         isHovered1
                             ? { duration: 0 }
@@ -46,9 +49,7 @@ const Hero = () => {
 
                 {/* الشارة الثانية: Next.js */}
                 <motion.div
-                    animate={
-                       MOTIONMOVE
-                    }
+                    animate={MOTIONMOVE}
                     transition={
                         isHovered1
                             ? { duration: 0 }
@@ -73,9 +74,7 @@ const Hero = () => {
                 {/* الشارة الثالثة: TypeScript */}
 
                 <motion.div
-                    animate={
-                       MOTIONMOVE
-                    }
+                    animate={MOTIONMOVE}
                     transition={
                         isHovered1
                             ? { duration: 0 }
@@ -99,9 +98,7 @@ const Hero = () => {
                     </div>
                 </motion.div>
                 <motion.div
-                    animate={
-                        MOTIONMOVE
-                    }
+                    animate={MOTIONMOVE}
                     transition={
                         isHovered1
                             ? { duration: 0 }

@@ -127,14 +127,14 @@ const Projects = () => {
                                         YEAR: 2025
                                     </span>
                                 </div>
-                                <div className="relative w-full aspect-[2/1] rounded-xl overflow-hidden bg-[#090A0F] border border-white/10">
+                                <div className="relative w-full aspect-2/1x rounded-xl overflow-hidden bg-[#090A0F] border border-white/10">
                                     <div
                                         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80"
                                         style={{
                                             backgroundImage: `url(${img})`,
                                         }}
                                     ></div>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#090A0F] via-transparent to-transparent"></div>
+                                    <div className="absolute inset-0 bg-linear-to-t from-[#090A0F] via-transparent to-transparent"></div>
                                     <div className="absolute top-2 right-2 px-2 py-0.5 rounded bg-[#090A0F]/80 border border-[#FF5500]/30 font-label-mono-sm text-[10px] text-[#FF5500]">
                                         Canvas ISR • Strapi GraphQL
                                     </div>
