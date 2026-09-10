@@ -2,27 +2,26 @@ import { useState } from "react";
 import DownloadCVButton from "./BtnDownload";
 import TelemetryCard from "./Card";
 import { motion } from "framer-motion";
+import HandleResize from "../../../../lib/IsMobile/handleResize";
 
 const Hero = () => {
+    const { isMobile } = HandleResize();
     const [isHovered1, setIsHovered1] = useState(false);
+    const MOTIONMOVE = isMobile 
+        ? { x: [0, 23, -15, 0], y: [0, 150, -5, 0], rotate: [0, 13, -22, 0] } // حركة اهتزاز خفيفة جداً للموبايل
+        : { x: [0, 100, 300, -10, 100, 0], y: [0, 100, 200, 100, 200, 0], rotate: [0, 8, -5, 0] }; // الحركة الكبيرة للكمبيوتر
 
     /*     const [isHovered2, setIsHovered2] = useState(false);
     const [isHovered3, setIsHovered3] = useState(false); */
     return (
-        <section className="min-h-[calc(100vh-5rem)] flex flex-col justify-between w-full mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-16">
+        <section className=" min-h-[calc(100vh-5rem)] flex flex-col justify-between w-full mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-16">
             {/* <!-- Top Hero Telemetry Status Tags --> */}
-            <div className=" relative z-300  flex flex-wrap items-center gap-6 mb-8 w-full min-h-[60px]">
+            <div className=" relative z-0 flex flex-wrap items-center gap-6 mb-8 w-full min-h-[60px]">
                 {/* الشارة الأولى: STRAPI v5.4 KERNEL */}
                 <motion.div
                     // 💡 التجميد السحري: إذا كانت hovered تكون الأبعاد 0 (تثبت مكانها الحالي)، وإلا تستمر في المصفوفة الحركية
                     animate={
-                        isHovered1
-                            ? { x: undefined, y: undefined, rotate: undefined }
-                            : {
-                                  x: [0, 100, 300, -10, 100, 0],
-                                  y: [0, 100, 200, 100, 200, 0],
-                                  rotate: [0, 8, -5, 0],
-                              }
+                        MOTIONMOVE
                     }
                     transition={
                         isHovered1
@@ -35,7 +34,7 @@ const Hero = () => {
                     }
                     onMouseEnter={() => setIsHovered1(true)}
                     onMouseLeave={() => setIsHovered1(false)}
-                    className=" absolute will-change-transform cursor-pointer pointer-events-auto"
+                    className=" relative will-change-transform cursor-pointer pointer-events-auto"
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181A24]/90 border border-white/10 backdrop-blur-md shadow-[0_0_15px_rgba(255,85,0,0.15)] hover:scale-105 transition-transform duration-200">
                         <span className="w-2 h-2 rounded-full bg-[#FF5500] shadow-[0_0_8px_#FF5500]"></span>
@@ -48,13 +47,7 @@ const Hero = () => {
                 {/* الشارة الثانية: Next.js */}
                 <motion.div
                     animate={
-                        isHovered1
-                            ? { x: undefined, y: undefined, rotate: undefined }
-                            : {
-                                  x: [0, -100, 300, 10, -100, 0],
-                                  y: [0, 200, 100, 200, -10, 0],
-                                  rotate: [0, 80, -5, 0],
-                              }
+                       MOTIONMOVE
                     }
                     transition={
                         isHovered1
@@ -67,7 +60,7 @@ const Hero = () => {
                     }
                     onMouseEnter={() => setIsHovered1(true)}
                     onMouseLeave={() => setIsHovered1(false)}
-                    className="will-change-transform cursor-pointer pointer-events-auto"
+                    className=" relative will-change-transform cursor-pointer pointer-events-auto"
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181A24]/90 border border-[#8B5CF6]/30 backdrop-blur-md shadow-[0_0_15px_rgba(139,92,246,0.15)] hover:scale-105 transition-transform duration-200">
                         <span className="w-2 h-2 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]"></span>
@@ -81,13 +74,7 @@ const Hero = () => {
 
                 <motion.div
                     animate={
-                        isHovered1
-                            ? { x: undefined, y: undefined, rotate: undefined }
-                            : {
-                                  x: [0, 120, 120, 0],
-                                  y: [0, 150, -10, 100, 0],
-                                  rotate: [0, 5, -8, 0],
-                              }
+                       MOTIONMOVE
                     }
                     transition={
                         isHovered1
@@ -100,7 +87,7 @@ const Hero = () => {
                     }
                     onMouseEnter={() => setIsHovered1(true)}
                     onMouseLeave={() => setIsHovered1(false)}
-                    className="will-change-transform cursor-pointer pointer-events-auto"
+                    className="relative will-change-transform cursor-pointer pointer-events-auto"
                 >
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181A24]/90 border border-white/10 backdrop-blur-md shadow-[0_0_15px_rgba(255,85,0,0.1)] hover:scale-105 transition-transform duration-200">
                         <span className="material-symbols-outlined text-[14px] text-[#FF5500]">
@@ -113,13 +100,7 @@ const Hero = () => {
                 </motion.div>
                 <motion.div
                     animate={
-                        isHovered1
-                            ? { x: undefined, y: undefined, rotate: undefined }
-                            : {
-                                  x: [0, 200, -20, 0],
-                                  y: [0, 50, 100, -10, 0],
-                                  rotate: [0, 5, -8, 0],
-                              }
+                        MOTIONMOVE
                     }
                     transition={
                         isHovered1
@@ -132,7 +113,7 @@ const Hero = () => {
                     }
                     onMouseEnter={() => setIsHovered1(true)}
                     onMouseLeave={() => setIsHovered1(false)}
-                    className="will-change-transform cursor-pointer pointer-events-auto"
+                    className="relative will-change-transform cursor-pointer pointer-events-auto"
                 >
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181A24]/90 border border-white/10 backdrop-blur-md shadow-[0_0_15px_rgba(255,85,0,0.1)] hover:scale-105 transition-transform duration-200">
                         <span className="material-symbols-outlined text-[14px] text-[#FF5500]">

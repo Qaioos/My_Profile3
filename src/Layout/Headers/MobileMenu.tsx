@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
 
 // أضفنا isOpen و onClose للتحكم بفتح وإغلاق القائمة
 interface MobileMenuProps {
@@ -10,23 +10,27 @@ interface MobileMenuProps {
 const MobileMenu = ({ navs, isOpen, onClose }: MobileMenuProps) => {
     return (
         // AnimatePresence ضرورية جداً لكي تعمل حركة الـ Exit عند إغلاق القائمة
-        <AnimatePresence >
+        <AnimatePresence>
             {isOpen && (
-                <motion.article 
+                <motion.article
                     // تأثيرات الحركة والانتقال
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 200 }}
                     exit={{ opacity: 1, y: -205 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    
-                    className="fixed absolute inset-0  md:hidden flex flex-col justify-center items-center px-6 backdrop-blur-lg"
+                    className=" absolute   inset-0  md:hidden flex flex-col justify-center items-center px-6 backdrop-blur-lg"
                 >
                     {/* خلفية مخفية لإغلاق القائمة عند الضغط خارج المربع */}
-                    <div className="absolute inset-0 w-10000 h-10000" onClick={onClose} />
+                    <div
+                        className="absolute inset-0 w-full h-full"
+                        onClick={onClose}
+                    />
 
                     <nav className=" absolute z-10 flex flex-col items-center gap-4 p-5 w-full  rounded-2xl bg-[#10121A]/80 border border-white/10 shadow-2xl">
-                        <p className="text-white/40 text-[10px] font-mono tracking-widest uppercase mb-2">Navigation</p>
-                        
+                        <p className="text-white/40 text-[10px] font-mono tracking-widest uppercase mb-2">
+                            Navigation
+                        </p>
+
                         {navs.map((el, i) => {
                             return (
                                 <a
