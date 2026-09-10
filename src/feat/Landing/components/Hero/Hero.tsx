@@ -4,7 +4,6 @@ import TelemetryCard from "./Card";
 import { motion } from "framer-motion";
 import PageSize from "../../../../lib/IsMobile/PageSize";
 
-
 const Hero = () => {
     const { isMobile } = PageSize();
     const [isHovered1, setIsHovered1] = useState(false);
