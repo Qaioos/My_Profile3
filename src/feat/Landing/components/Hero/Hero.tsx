@@ -163,7 +163,7 @@ const Hero = () => {
                     {/*  <!-- Magnetic Action Buttons --> */}
                     <div className="flex flex-wrap items-center gap-4 mt-10">
                         <a
-                            className="group relative px-8 py-4 rounded-full bg-[#FF5500] text-white font-label-mono-lg font-bold text-sm tracking-wider uppercase flex items-center gap-3 shadow-[0_0_30px_rgba(255,85,0,0.4)] hover:shadow-[0_0_50px_rgba(255,85,0,0.7)] hover:bg-[#FF6B1A] hover:scale-105 active:scale-95 transition-all duration-300"
+                            className="group relative px-2 py-4 rounded-full bg-[#FF5500] text-white font-label-mono-lg font-bold text-sm tracking-wider uppercase flex items-center gap-3 shadow-[0_0_30px_rgba(255,85,0,0.4)] hover:shadow-[0_0_50px_rgba(255,85,0,0.7)] hover:bg-[#FF6B1A] hover:scale-105 active:scale-95 transition-all duration-300"
                             href="#projects"
                         >
                             <span>EXPLORE SELECTED WORKS</span>

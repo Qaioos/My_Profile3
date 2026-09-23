@@ -1,5 +1,6 @@
 
 const Footer = () => {
+    const getDate = new Date().getFullYear()
   return (
         <footer
             className="w-full bg-[#06070B] border-t border-white/10 py-8 relative z-20"
@@ -56,7 +57,7 @@ const Footer = () => {
                 <div
                     className="flex items-center gap-2 font-label-mono-sm text-xs text-outline"
                 >
-                    <span className="text-white/80">© 2025 KAIRO LABS</span>
+                    <span className="text-white/80">© {getDate} Developed with ❤️ by Me </span>
                     <span>// ALL SYSTEMS OPERATIONAL</span>
                 </div>
             </div>
