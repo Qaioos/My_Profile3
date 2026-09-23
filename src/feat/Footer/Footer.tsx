@@ -29,7 +29,7 @@ const Footer = () => {
                 >
                     <a
                         className="hover:text-[#FF5500] transition-colors"
-                        href="https://github.com"
+                        href="https://github.com/Qaioos"
                         rel="noreferrer"
                         target="_blank"
                         >GITHUB</a>
@@ -38,16 +38,16 @@ const Footer = () => {
                         href="https://x.com"
                         rel="noreferrer"
                         target="_blank"
-                        >X / TWITTER</a>
+                        >Facebook</a>
                     <a
                         className="hover:text-[#FF5500] transition-colors"
-                        href="https://read.cv"
+                        href="/public/Qais_Salha_FrontEnd_Developer_Cv.pdf"
                         rel="noreferrer"
                         target="_blank"
                         >READ.CV</a>
                     <a
                         className="hover:text-[#FF5500] transition-colors"
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/in/qais-salha-000052360"
                         rel="noreferrer"
                         target="_blank"
                         >LINKEDIN</a>

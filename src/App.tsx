@@ -21,7 +21,7 @@ function App() {
     <InterActivTech/>
     <Projects/>
     <Expedition/> 
-    <Contact/>
+    {/* <Contact/> */}
     <Footer/>
     </>
   )
