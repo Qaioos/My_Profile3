@@ -3,7 +3,7 @@ import Running from './Components/Runnung/Running'
 
 import Footer from './feat/Footer/Footer'
 import AboutIdentity from './feat/Landing/components/About_Identty/AboutIdentity'
-import Contact from './feat/Landing/components/Contact/Contact'
+/* import Contact from './feat/Landing/components/Contact/Contact' */
 import Expedition from './feat/Landing/components/Expedition/Expedition'
 import Projects from './feat/Landing/components/FeatureWork/Projects'
 import Hero from './feat/Landing/components/Hero/Hero'
