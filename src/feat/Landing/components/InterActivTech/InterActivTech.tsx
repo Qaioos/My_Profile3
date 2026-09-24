@@ -9,25 +9,25 @@ const InterActivTech = () => {
                     className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 mb-12 border-b border-white/10"
                 >
                     <div>
-                        <div
+                      {/*   <div
                             className="flex items-center gap-3 font-label-mono-sm text-xs mb-2"
                         >
                             <span className="text-[#8B5CF6] font-bold"
                                 >04 // TECH RADAR</span>
                             <span className="text-outline"
                                 >COLLECTION: STRAPI_SKILLS_MATRIX</span>
-                        </div>
+                        </div> */}
                         <h2
                             className="font-display-hero text-4xl sm:text-5xl font-black uppercase text-white tracking-tight"
                         >
                             Telemetry &amp; Capabilities
                         </h2>
                     </div>
-                    <div
+{/*                     <div
                         className="font-label-mono-sm text-xs text-[#FF5500] font-semibold tracking-wider"
                     >
                         SYS_AUDIT: PASS 100% // PRODUCTION VERIFIED
-                    </div>
+                    </div> */}
                 </div>
                 {/* <!-- 4-Column High-Tech Grid with animated progress bars --> */}
                 <div
@@ -102,9 +102,7 @@ const InterActivTech = () => {
                                 </div>
                             </div>
                         </div>
-                        <span
-                            className="font-label-mono-sm text-[11px] text-outline pt-2 border-t border-white/5"
-                            >KERNEL: SHADER_COMPUTE_V2</span>
+                        
                     </div>
                    {/*  <!-- Pillar 02: Frontend Core --> */}
                     <div
@@ -174,9 +172,7 @@ const InterActivTech = () => {
                                 </div>
                             </div>
                         </div>
-                        <span
-                            className="font-label-mono-sm text-[11px] text-outline pt-2 border-t border-white/5"
-                            >REACT_COMPILER: PASS</span>
+                        
                     </div>
                    {/*  <!-- Pillar 03: CMS & Backend --> */}
                     <div
@@ -246,9 +242,7 @@ const InterActivTech = () => {
                                 </div>
                             </div>
                         </div>
-                        <span
-                            className="font-label-mono-sm text-[11px] text-outline pt-2 border-t border-white/5"
-                            >STRAPI_API: HEADLESS_REACTIVE</span>
+                        
                     </div>
                    {/*  <!-- Pillar 04: DevOps & Performance --> */}
                     <div
@@ -318,9 +312,7 @@ const InterActivTech = () => {
                                 </div>
                             </div>
                         </div>
-                        <span
-                            className="font-label-mono-sm text-[11px] text-outline pt-2 border-t border-white/5"
-                            >SUB_50MS_TTFB_CONFIRMED</span>
+                       
                     </div>
                 </div>
             </section>

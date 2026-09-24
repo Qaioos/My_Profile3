@@ -10,19 +10,7 @@ const Footer = () => {
             >
                 {/* Left: Status & Node Telemetry */}
                 <div className="flex flex-wrap items-center gap-4">
-                    <div
-                        className="flex items-center gap-2 px-3 py-1 rounded bg-[#10121A] border border-white/5 font-label-mono-sm text-xs text-[#8B5CF6]"
-                    >
-                        <span
-                            className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6] animate-ping"
-                        ></span>
-                        <span>STRAPI v5 LIVE • 12ms</span>
-                    </div>
-                    <span className="font-label-mono-sm text-xs text-outline">
-                        UTC
-                        <span className="text-white" id="utc-clock">14:28:02</span>
-                        // NODE-SYD-01
-                    </span>
+                    
                 </div>
                 {/* Center: Social Anchors */}
                 <div
@@ -57,8 +45,8 @@ const Footer = () => {
                 <div
                     className="flex items-center gap-2 font-label-mono-sm text-xs text-outline"
                 >
-                    <span className="text-white/80">© {getDate} Developed with ❤️ by Me </span>
-                    <span>// ALL SYSTEMS OPERATIONAL</span>
+                    <span className="text-white/80">© {getDate} Developed with❤️by Me</span>
+                    
                 </div>
             </div>
         </footer>

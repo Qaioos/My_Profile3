@@ -35,7 +35,7 @@ const AboutIdentity = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-[#090A0F] via-transparent to-transparent opacity-80 pointer-events-none"></div>
                         {/* <!-- Top HUD Tag --> */}
                         <div className="absolute top-5 inset-x-5 flex items-center justify-between z-10 pointer-events-none">
-{/*                             <div className="px-2.5 py-1 rounded bg-[#090A0F]/80 border border-white/10 backdrop-blur-md font-label-mono-sm text-[10px] text-[#FF5500] font-bold">
+                            {/*                             <div className="px-2.5 py-1 rounded bg-[#090A0F]/80 border border-white/10 backdrop-blur-md font-label-mono-sm text-[10px] text-[#FF5500] font-bold">
                                 NODE: KAIRO-01 // IDENTITY: VERIFIED
                             </div> */}
                             <div className="w-2 h-2 rounded-full bg-[#8B5CF6] animate-ping"></div>
@@ -47,7 +47,7 @@ const AboutIdentity = () => {
                                     Qais Salha
                                 </div>
                                 <div className="font-label-mono-sm text-xs text-[#8B5CF6]">
-                                    Designer Principal Systems 
+                                    Designer Principal Systems
                                 </div>
                             </div>
                             <div className="w-10 h-10 rounded-lg bg-[#FF5500] text-white flex items-center justify-center font-bold">
@@ -59,7 +59,7 @@ const AboutIdentity = () => {
                     </div>
                     {/* <!-- Bottom Audio Reactor Tag --> */}
                     <div className="mt-4 flex items-center justify-between px-4 py-2 rounded-lg bg-[#10121A] border border-white/10 font-label-mono-sm text-xs text-outline max-w-[480px] mx-auto">
-{/*                         <span className="flex items-center gap-2 text-white">
+                        {/*                         <span className="flex items-center gap-2 text-white">
                             <span className="w-2 h-2 rounded-full bg-[#FF5500] animate-pulse"></span>
                             <span>AUDIO REACTOR: ENGAGED</span>
                         </span>
@@ -71,25 +71,31 @@ const AboutIdentity = () => {
                 {/* <!-- Right: Narrative & Live Strapi Telemetry Matrix --> */}
                 <div className="lg:col-span-7 flex flex-col gap-6">
                     <div className="flex items-center gap-2 text-[#8B5CF6] font-label-mono-sm text-xs uppercase tracking-widest">
-                        <span>Philosophy &amp; Execution</span>
+                        <span>
+                            ENGINEERING & EXPERIENCE — FRONT-END ARCHITECTURE
+                        </span>
                         <span>—</span>
-                        <span>Strapi Core v5</span>
+                        <span>ACADEMIC FOUNDATION </span>
                     </div>
                     <h2 className="font-display-hero text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase text-white leading-tight">
-                        Integrating real-time computing pipelines with
-                        mission-critical systems.
+                        ENGINEERING SCALABLE WEB ARCHITECTURES WITH
+                        PIXEL-PERFECT EXECUTION.
                     </h2>
                     <p className="font-body-lg text-base sm:text-lg text-[#9EA3B0] leading-relaxed">
-                        It leverages Internet architecture and data structures
-                        to support complex systems and software, ensuring full
-                        compatibility with critical operational processes and
-                        meeting essential functional requirements. By building
-                        advanced software architectures based on Next.js 15 and
-                        Strapi v5—and employing high-performance computing via
-                        central and spatial processing engines—it delivers
-                        flexible, low-latency, and infinitely scalable digital
-                        systems, all while adhering to constraints regarding
-                        limited resources.
+                        My path into software engineering started during my
+                        university years. Academia didn't just teach me syntax;
+                        it shaped how I break down complex architectural
+                        problems and work with data structures. While building a
+                        strong foundation in computer science, I realized my
+                        real interest was on the client side. I found a massive
+                        gap between heavy system logic and what the user
+                        actually experiences, and I wanted to bridge that gap by
+                        building fast, reliable front-end systems. To me,
+                        front-end development is more than just making things
+                        look good. It is engineering. It’s about managing
+                        complex state, structuring code so it scales, and
+                        ensuring the interface remains highly responsive under
+                        any load.
                     </p>
                     {/* Spectral Telemetry Visualizer Card */}
                     <div className="p-6 rounded-2xl bg-[#10121A]/90 border border-white/10 backdrop-blur-md flex flex-col gap-4">
@@ -98,7 +104,6 @@ const AboutIdentity = () => {
                                 <span className="material-symbols-outlined text-[16px]">
                                     graphic_eq
                                 </span>
-                             
                             </div>
                             <span className="text-outline">
                                 AUDIO-SYNTH: ACTIVE
