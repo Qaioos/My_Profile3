@@ -24,13 +24,13 @@ const Footer = () => {
                         >GITHUB</a>
                     <a
                         className="hover:text-[#FF5500] transition-colors"
-                        href="https://x.com"
+                        href="https://www.facebook.com/share/1DF9sMpsAt/"
                         rel="noreferrer"
                         target="_blank"
                         >Facebook</a>
                     <a
                         className="hover:text-[#FF5500] transition-colors"
-                        href="/public/Qais_Salha_FrontEnd_Developer_Cv.pdf"
+                        href="/Qais_Salha_FrontEnd_Developer_Cv.pdf"
                         rel="noreferrer"
                         target="_blank"
                         >READ.CV</a>

@@ -14,7 +14,10 @@ export default function ContactSection() {
     }; */
 
     return (
-        <section className="bg-[#0B0B0F] text-white py-20 px-6 font-sans relative overflow-hidden">
+        
+        <section 
+        id="contact"
+        className="bg-[#0B0B0F] text-white py-20 px-6 font-sans relative overflow-hidden">
             {/* تأثيرات الإضاءة الخلفية المحيطية المماثلة لموقعك */}
             <div className="absolute top-1/4 left-0 w-72 h-72 bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-0 w-72 h-72 bg-[#FF4500]/5 rounded-full blur-[150px] pointer-events-none" />
